@@ -113,56 +113,59 @@ export function WorkExperience() {
         </FadeIn>
 
         {roles.map((block, index) => (
-          <div key={block.role}>
-            {index > 0 && <Separator className="my-12" />}
+          <div key={block.role} className="flex gap-6">
+            {/* Timeline */}
+            <div className="hidden sm:flex flex-col items-center shrink-0">
+              <div className="size-3 rounded-full bg-primary ring-4 ring-primary/20" />
+              {index < roles.length - 1 && (
+                <div className="w-px bg-border flex-1 mt-2" />
+              )}
+            </div>
 
-            <FadeIn delay={0.1}>
-              <div className="flex flex-wrap items-center gap-x-4 gap-y-2 mb-2">
-                <h3 className="text-2xl font-semibold">{block.role}</h3>
-                <Badge variant="outline" className="text-xs font-mono">
-                  1С
+            {/* Content */}
+            <div className="flex-1 pb-12">
+              <FadeIn delay={0.1}>
+                <h3 className="text-2xl font-semibold mb-3">{block.role}</h3>
+                <Badge variant="secondary" className="text-xs font-mono mb-4">
+                  1С • {block.period}
                 </Badge>
-              </div>
-              <p className="text-sm text-muted-foreground font-mono mb-1">
-                {block.period}
-              </p>
-              <p className="text-muted-foreground mb-8 max-w-2xl">
-                {block.description}
-              </p>
-            </FadeIn>
+                <p className="text-muted-foreground mb-8 max-w-2xl">
+                  {block.description}
+                </p>
+              </FadeIn>
 
-
-            <StaggerContainer className="grid md:grid-cols-2 gap-6">
-              {block.achievements.map((item) => (
-                <StaggerItem key={item.title}>
-                  <Card className="h-full hover:border-primary/30 transition-colors">
-                    <CardHeader>
-                      <div className="flex items-center justify-between">
-                        <item.icon className="size-5 text-primary" />
-                        <Badge variant="outline" className="font-mono text-xs">
-                          {item.metric}
-                        </Badge>
-                      </div>
-                      <CardTitle className="text-lg">{item.title}</CardTitle>
-                      <CardDescription>{item.description}</CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                      <div className="flex flex-wrap gap-1.5">
-                        {item.tags.map((tag) => (
-                          <Badge
-                            key={tag}
-                            variant="secondary"
-                            className="text-xs"
-                          >
-                            {tag}
+              <StaggerContainer className="grid md:grid-cols-2 gap-6">
+                {block.achievements.map((item) => (
+                  <StaggerItem key={item.title}>
+                    <Card className="h-full hover:border-primary/30 transition-colors">
+                      <CardHeader>
+                        <div className="flex items-center justify-between">
+                          <item.icon className="size-5 text-primary" />
+                          <Badge variant="outline" className="font-mono text-xs">
+                            {item.metric}
                           </Badge>
-                        ))}
-                      </div>
-                    </CardContent>
-                  </Card>
-                </StaggerItem>
-              ))}
-            </StaggerContainer>
+                        </div>
+                        <CardTitle className="text-lg">{item.title}</CardTitle>
+                        <CardDescription>{item.description}</CardDescription>
+                      </CardHeader>
+                      <CardContent>
+                        <div className="flex flex-wrap gap-1.5">
+                          {item.tags.map((tag) => (
+                            <Badge
+                              key={tag}
+                              variant="secondary"
+                              className="text-xs"
+                            >
+                              {tag}
+                            </Badge>
+                          ))}
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </StaggerItem>
+                ))}
+              </StaggerContainer>
+            </div>
           </div>
         ))}
       </div>
