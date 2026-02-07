@@ -8,7 +8,6 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Separator } from "@/components/ui/separator";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/components/motion";
 import type { LucideIcon } from "lucide-react";
 import {
