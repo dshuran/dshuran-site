@@ -47,7 +47,7 @@ const roles: RoleBlock[] = [
     responsibilities: [
       {
         icon: Layers,
-        text: "Улучшение UI/UX платформы «Элемент», влияющей на все продукты компании",
+        text: "Улучшение UI/UX технологии «Элемент»",
       },
       {
         icon: GitBranch,
@@ -124,11 +124,8 @@ export function WorkExperience() {
     <section id="experience" className="py-24 sm:py-32 px-6">
       <div className="max-w-5xl mx-auto">
         <FadeIn>
-          <p className="text-primary font-mono text-sm tracking-wider uppercase mb-3">
-            Опыт работы
-          </p>
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-12">
-            Профессиональный опыт
+            Опыт работы
           </h2>
         </FadeIn>
 

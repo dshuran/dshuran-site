@@ -22,11 +22,8 @@ export function About() {
     <section id="about" className="py-24 sm:py-32 px-6">
       <div className="max-w-5xl mx-auto">
         <FadeIn>
-          <p className="text-primary font-mono text-sm tracking-wider uppercase mb-3">
-            Обо мне
-          </p>
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-12">
-            Кратко о себе
+            Обо мне
           </h2>
         </FadeIn>
 

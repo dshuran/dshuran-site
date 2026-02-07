@@ -29,11 +29,8 @@ export function Contact() {
     <section id="contact" className="py-24 sm:py-32 px-6">
       <div className="max-w-5xl mx-auto">
         <FadeIn>
-          <p className="text-primary font-mono text-sm tracking-wider uppercase mb-3">
-            Контакты
-          </p>
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-4">
-            Давайте на связи
+            Контакты
           </h2>
           <p className="text-muted-foreground text-lg mb-12 max-w-2xl">
             Открыт к интересным предложениям и коллаборациям. Пишите в любой

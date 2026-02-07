@@ -21,10 +21,6 @@ export function Hero() {
           transition={{ duration: 0.7, ease: "easeOut" }}
           className="space-y-6"
         >
-          <p className="text-primary font-mono text-sm tracking-wider uppercase">
-            Team Lead
-          </p>
-
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight">
             Привет, я{" "}
             <span className="text-primary">Дима</span>
