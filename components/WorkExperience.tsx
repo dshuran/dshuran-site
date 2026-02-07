@@ -18,8 +18,6 @@ import {
   Server,
   Users,
   BarChart3,
-  GitBranch,
-  Layers,
 } from "lucide-react";
 
 interface Achievement {
@@ -34,7 +32,6 @@ interface RoleBlock {
   role: string;
   period: string;
   description: string;
-  responsibilities?: { icon: LucideIcon; text: string }[];
   achievements: Achievement[];
 }
 
@@ -44,20 +41,6 @@ const roles: RoleBlock[] = [
     period: "Январь 2025 — настоящее время",
     description:
       "Руковожу командой из 3 frontend-разработчиков. Отвечаю за процессы, качество и развитие продукта.",
-    responsibilities: [
-      {
-        icon: Layers,
-        text: "Улучшение UI/UX технологии «Элемент»",
-      },
-      {
-        icon: GitBranch,
-        text: "Инфраструктура тестов — стабильность и масштабирование",
-      },
-      {
-        icon: MessageCircle,
-        text: "Мессенджер на клиенте — UI/UX, интеграция, объектная модель",
-      },
-    ],
     achievements: [
       {
         icon: Users,
@@ -148,21 +131,6 @@ export function WorkExperience() {
               </p>
             </FadeIn>
 
-            {block.responsibilities && (
-              <FadeIn delay={0.15}>
-                <div className="grid sm:grid-cols-3 gap-4 mb-10">
-                  {block.responsibilities.map((item) => (
-                    <div
-                      key={item.text}
-                      className="flex items-start gap-3 p-4 rounded-lg bg-secondary/50"
-                    >
-                      <item.icon className="size-5 text-primary shrink-0 mt-0.5" />
-                      <p className="text-sm text-foreground">{item.text}</p>
-                    </div>
-                  ))}
-                </div>
-              </FadeIn>
-            )}
 
             <StaggerContainer className="grid md:grid-cols-2 gap-6">
               {block.achievements.map((item) => (
