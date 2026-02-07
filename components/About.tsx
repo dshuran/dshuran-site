@@ -12,7 +12,6 @@ const skills = [
   "Product Management",
   "Project Management",
   "Playwright",
-  "WebSocket",
   "CI/CD",
   "Low-code",
   "MobX"
