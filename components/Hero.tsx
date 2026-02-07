@@ -42,11 +42,11 @@ export function Hero() {
               size="lg"
               onClick={() =>
                 document
-                  .querySelector("#experience")
+                  .querySelector("#about")
                   ?.scrollIntoView({ behavior: "smooth" })
               }
             >
-              Мой опыт
+              Обо мне
               <ArrowDown className="size-4" />
             </Button>
             <Button variant="outline" size="lg" onClick={scrollToContact}>
