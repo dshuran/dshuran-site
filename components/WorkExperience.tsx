@@ -18,6 +18,7 @@ import {
   Server,
   Users,
   BarChart3,
+  Bell,
 } from "lucide-react";
 
 interface Achievement {
@@ -46,7 +47,7 @@ const roles: RoleBlock[] = [
         icon: Users,
         title: "Выстраивание процессов команды",
         description:
-          "Внедрил регулярные 1-on-1, планирование через диаграммы Ганта. Синхронизация с дизайнерами и продуктовой командой через общий бэклог.",
+          "Внедрил регулярные 1-on-1, планы разработки. Синхронизация с дизайнерами и продуктовой командой через общий бэклог.",
         metric: "3 разработчика",
         tags: ["Management", "Agile", "1-on-1"],
       },
@@ -54,9 +55,9 @@ const roles: RoleBlock[] = [
         icon: BarChart3,
         title: "Продуктовый менеджмент",
         description:
-          "Объединил команды дизайнеров и продукта, взял на себя роль продакт-менеджера. Внедряю продуктовые метрики (CES/NPS).",
-        metric: "CES/NPS",
-        tags: ["Product", "Metrics", "UX Research"],
+          "Занимаюсь планированием задач, анализирую потребности пользователей и приоритизирую развитие продукта.",
+        metric: "Прозрачный бэклог",
+        tags: ["Product", "Planning", "UX Research"],
       },
       {
         icon: Server,
@@ -72,7 +73,7 @@ const roles: RoleBlock[] = [
     role: "Frontend-разработчик",
     period: "Ноябрь 2018 — Январь 2025",
     description:
-      "Разработка компонентов и фич для low-code платформы «Элемент».",
+      "Разработка компонентов и фич для low-code технологии «Элемент».",
     achievements: [
       {
         icon: TestTubeDiagonal,
@@ -86,7 +87,7 @@ const roles: RoleBlock[] = [
         icon: MessageCircle,
         title: "Интеграция мессенджера",
         description:
-          "Взял готовое решение и интегрировал в объектную модель low-code платформы через WebSocket. Личные и групповые чаты, отправка файлов.",
+          "Интегрировал корпоративные чаты в объектную модель low-code технологии через WebSocket. Личные и групповые чаты, отправка файлов.",
         metric: "WebSocket",
         tags: ["WebSocket", "Low-code", "Real-time"],
       },
@@ -97,6 +98,14 @@ const roles: RoleBlock[] = [
           "Разработал просмотрщик PDF для мобильных и десктопа. Решал сложности с плавным масштабированием и подгрузкой контента.",
         metric: "Mobile + Desktop",
         tags: ["PDF", "Mobile", "UX"],
+      },
+      {
+        icon: Bell,
+        title: "Система уведомлений",
+        description:
+          "Реализовал систему уведомлений с поддержкой нативных уведомлений ОС и браузерных нотификаций.",
+        metric: "Cross-platform",
+        tags: ["Notifications", "Web API", "UX"],
       },
     ],
   },

@@ -22,12 +22,14 @@ import { ExternalLink } from "lucide-react";
 import type { Project } from "@/lib/projects";
 
 const statusLabels: Record<string, string> = {
+  active: "Активный",
   "in-progress": "В разработке",
   completed: "Завершён",
   closed: "Закрыт",
 };
 
 const statusColors: Record<string, string> = {
+  active: "bg-blue-500/10 text-blue-400 border-blue-500/20",
   "in-progress": "bg-yellow-500/10 text-yellow-400 border-yellow-500/20",
   completed: "bg-green-500/10 text-green-400 border-green-500/20",
   closed: "bg-muted text-muted-foreground border-border",
@@ -59,17 +61,17 @@ export function PetProjects({ projects }: PetProjectsProps) {
           {projects.map((project) => (
             <StaggerItem key={project.slug}>
               <Card
-                className="h-full cursor-pointer hover:border-primary/30 transition-colors group"
+                className="h-full cursor-pointer hover:border-primary/30 transition-colors group flex flex-col"
                 onClick={() => setSelectedProject(project)}
               >
-                <CardHeader>
-                  <div className="flex items-center justify-between">
-                    <CardTitle className="text-lg group-hover:text-primary transition-colors">
+                <CardHeader className="flex-1">
+                  <div className="flex items-start justify-between gap-2">
+                    <CardTitle className="text-lg group-hover:text-primary transition-colors flex-1">
                       {project.title}
                     </CardTitle>
                     <Badge
                       variant="outline"
-                      className={`text-xs ${statusColors[project.status] ?? ""}`}
+                      className={`text-xs shrink-0 ${statusColors[project.status] ?? ""}`}
                     >
                       {statusLabels[project.status] ?? project.status}
                     </Badge>

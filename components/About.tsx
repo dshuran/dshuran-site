@@ -10,11 +10,12 @@ const skills = [
   "React",
   "TypeScript",
   "Product Management",
+  "Project Management",
   "Playwright",
   "WebSocket",
   "CI/CD",
   "Low-code",
-  "Agile",
+  "MobX"
 ];
 
 export function About() {
@@ -31,18 +32,18 @@ export function About() {
           <FadeIn delay={0.1}>
             <div className="space-y-6">
               <p className="text-muted-foreground leading-relaxed">
-                Мне 26 лет, я живу в Москве и работаю Team Lead
-                в технологической компании, которая создаёт low-code платформу.
+                Мне 26 лет, я живу в Москве и работаю лидом
+                в компании 1С, где мы занимаемся развитием low-code технологии.
               </p>
               <p className="text-muted-foreground leading-relaxed">
                 Руковожу командой из 3 frontend-разработчиков. Мы отвечаем за
-                платформу &laquo;Элемент&raquo;, которая используется в десятках тысяч
-                приложений. Фокусируюсь на технической разработке и
+                технологию &laquo;Элемент&raquo;, которая активно используется на рынке.
+                Фокусируюсь на технической разработке и
                 продуктовом менеджменте.
               </p>
               <p className="text-muted-foreground leading-relaxed">
                 Стремлюсь создавать продукты, которые решают реальные проблемы
-                пользователей, и строить процессы, которые помогают команде
+                пользователей, строю процессы, которые помогают команде
                 работать эффективнее.
               </p>
             </div>
