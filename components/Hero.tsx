@@ -41,12 +41,7 @@ export function Hero() {
             transition={{ delay: 0.4, duration: 0.5 }}
             className="flex gap-4 pt-4"
           >
-            <Button size="lg" onClick={scrollToContact}>
-              Связаться
-              <ArrowDown className="size-4" />
-            </Button>
             <Button
-              variant="outline"
               size="lg"
               onClick={() =>
                 document
@@ -55,6 +50,10 @@ export function Hero() {
               }
             >
               Мой опыт
+              <ArrowDown className="size-4" />
+            </Button>
+            <Button variant="outline" size="lg" onClick={scrollToContact}>
+              Связаться
             </Button>
           </motion.div>
         </motion.div>
