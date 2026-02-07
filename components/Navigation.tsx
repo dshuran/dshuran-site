@@ -87,7 +87,7 @@ export function Navigation() {
               <a
                 href={link.href}
                 onClick={(e) => scrollTo(e, link.href)}
-                className={`text-sm transition-colors hover:text-foreground ${
+                className={`text-base transition-colors hover:text-foreground ${
                   activeSection === link.href
                     ? "text-primary font-medium"
                     : "text-muted-foreground"
@@ -125,7 +125,7 @@ export function Navigation() {
                   <a
                     href={link.href}
                     onClick={(e) => scrollTo(e, link.href)}
-                    className={`block text-sm transition-colors ${
+                    className={`block text-base transition-colors ${
                       activeSection === link.href
                         ? "text-primary font-medium"
                         : "text-muted-foreground hover:text-foreground"
