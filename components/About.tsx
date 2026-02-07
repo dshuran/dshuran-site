@@ -61,7 +61,7 @@ export function About() {
                 </div>
                 <div className="flex items-center gap-3 text-foreground">
                   <Layers className="size-4 text-primary shrink-0" />
-                  <span>Low-code платформа &laquo;Element&raquo;</span>
+                  <span>Low-code технология &laquo;Элемент&raquo;</span>
                 </div>
               </div>
 

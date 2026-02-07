@@ -7,20 +7,20 @@ const contacts = [
   {
     icon: Github,
     label: "GitHub",
-    href: "https://github.com",
-    username: "@username",
+    href: "https://github.com/dshuran",
+    username: "@dshuran",
   },
   {
     icon: Send,
     label: "Telegram",
-    href: "https://t.me",
-    username: "@username",
+    href: "https://t.me/dshuran",
+    username: "@dshuran",
   },
   {
     icon: Linkedin,
     label: "LinkedIn",
-    href: "https://linkedin.com",
-    username: "profile",
+    href: "https://www.linkedin.com/in/swe-dshuran/",
+    username: "swe-dshuran",
   },
 ];
 
@@ -33,8 +33,7 @@ export function Contact() {
             Контакты
           </h2>
           <p className="text-muted-foreground text-lg mb-12 max-w-2xl">
-            Открыт к интересным предложениям и коллаборациям. Пишите в любой
-            удобный канал.
+            Открыт к интересным предложениям и коллаборациям.
           </p>
         </FadeIn>
 
