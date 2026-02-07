@@ -58,15 +58,15 @@ const achievements = [
 const teamInfo = [
   {
     icon: Users,
-    text: "Руковожу командой из 3 frontend-разработчиков",
+    text: "UI/UX флагманских продуктов (Персонал, Бизкуб, КС)",
   },
   {
     icon: GitBranch,
-    text: "Управляю платформой «Element» и флагманскими продуктами",
+    text: "Инфраструктура тестов — стабильность и масштабирование",
   },
   {
     icon: BarChart3,
-    text: "Внедряю продуктовые метрики (CES/NPS) и процессы команды",
+    text: "Мессенджер на клиенте — UI/UX, интеграция, объектная модель",
   },
 ];
 
@@ -79,7 +79,7 @@ export function WorkExperience() {
             Опыт работы
           </p>
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-4">
-            UI/UX Team Lead
+            Team Lead
           </h2>
           <p className="text-muted-foreground text-lg mb-12 max-w-2xl">
             Low-code технологическая компания

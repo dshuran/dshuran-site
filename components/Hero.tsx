@@ -22,7 +22,7 @@ export function Hero() {
           className="space-y-6"
         >
           <p className="text-primary font-mono text-sm tracking-wider uppercase">
-            UI/UX Team Lead
+            Team Lead
           </p>
 
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight">

@@ -34,7 +34,7 @@ export function About() {
           <FadeIn delay={0.1}>
             <div className="space-y-6">
               <p className="text-muted-foreground leading-relaxed">
-                Мне 26 лет, я живу в Москве и работаю UI/UX Team Lead
+                Мне 26 лет, я живу в Москве и работаю Team Lead
                 в технологической компании, которая создаёт low-code платформу.
               </p>
               <p className="text-muted-foreground leading-relaxed">
