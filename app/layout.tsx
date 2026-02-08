@@ -13,11 +13,14 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Дима — Team Lead",
+  title: "Дима Шуран",
   description:
-    "Персональный сайт-портфолио Team Lead. Техническое лидерство, управление командой и разработка продуктов.",
+    "Персональный сайт-портфолио. Техническое лидерство, управление командой и разработка продуктов.",
+  icons: {
+    icon: "/favicon.svg",
+  },
   openGraph: {
-    title: "Дима — Team Lead",
+    title: "Дима Шуран",
     description:
       "Техническое лидерство, управление командой и разработка продуктов.",
     type: "website",
