@@ -25,6 +25,18 @@ export function Navigation() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isMenuOpen]);
+
   useEffect(() => {
     const sections = navLinks.map((link) =>
       document.querySelector(link.href)
@@ -101,42 +113,53 @@ export function Navigation() {
 
         {/* Mobile hamburger */}
         <button
-          className="md:hidden p-2 text-muted-foreground hover:text-foreground transition-colors"
+          className="md:hidden flex items-center justify-center w-11 h-11 -mr-2 text-muted-foreground hover:text-foreground transition-colors touch-manipulation"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label={isMenuOpen ? "Закрыть меню" : "Открыть меню"}
         >
-          {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
+          {isMenuOpen ? <X size={22} /> : <Menu size={22} />}
         </button>
       </nav>
 
       {/* Mobile menu */}
       <AnimatePresence>
         {isMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.2 }}
-            className="md:hidden overflow-hidden bg-background/95 backdrop-blur-md border-b border-border"
-          >
-            <ul className="flex flex-col px-6 py-4 gap-4">
-              {navLinks.map((link) => (
-                <li key={link.href}>
-                  <a
-                    href={link.href}
-                    onClick={(e) => scrollTo(e, link.href)}
-                    className={`block text-base transition-colors ${
-                      activeSection === link.href
-                        ? "text-primary font-medium"
-                        : "text-muted-foreground hover:text-foreground"
-                    }`}
-                  >
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
+          <>
+            {/* Backdrop */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              className="md:hidden fixed inset-0 top-[calc(var(--nav-height,64px))] bg-black/50"
+              onClick={() => setIsMenuOpen(false)}
+            />
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.2 }}
+              className="md:hidden bg-background/95 backdrop-blur-md border-b border-border"
+            >
+              <ul className="flex flex-col px-6 py-4 gap-1">
+                {navLinks.map((link) => (
+                  <li key={link.href}>
+                    <a
+                      href={link.href}
+                      onClick={(e) => scrollTo(e, link.href)}
+                      className={`block py-3 text-base transition-colors touch-manipulation ${
+                        activeSection === link.href
+                          ? "text-primary font-medium"
+                          : "text-muted-foreground hover:text-foreground"
+                      }`}
+                    >
+                      {link.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
     </header>
