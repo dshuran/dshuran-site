@@ -3,7 +3,6 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
-import Image from "next/image";
 
 export function Hero() {
   const scrollToContact = () => {
@@ -61,14 +60,24 @@ export function Hero() {
           transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
           className="order-1 md:order-2 flex justify-center"
         >
-          <Image
-            src="/photo.jpeg"
-            alt="Дима"
-            width={400}
-            height={500}
-            className="w-64 sm:w-72 md:w-80 lg:w-96 rounded-2xl object-cover object-[center_20%] ring-1 ring-white/10"
-            priority
-          />
+          <picture>
+            <source
+              srcSet="/photo-sm.webp"
+              media="(max-width: 767px)"
+              type="image/webp"
+            />
+            <source
+              srcSet="/photo-lg.webp"
+              type="image/webp"
+            />
+            <img
+              src="/photo.jpeg"
+              alt="Дима"
+              width={400}
+              height={500}
+              className="w-64 sm:w-72 md:w-80 lg:w-96 rounded-2xl object-cover object-[center_20%] ring-1 ring-white/10"
+            />
+          </picture>
         </motion.div>
       </div>
 
