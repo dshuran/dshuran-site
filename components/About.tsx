@@ -43,7 +43,15 @@ export function About() {
               <p className="text-muted-foreground leading-relaxed">
                 Стремлюсь создавать продукты, которые решают реальные проблемы
                 пользователей, строю процессы, которые помогают команде
-                работать эффективнее.
+                работать эффективнее. Делюсь мыслями и опытом в своём{" "}
+                <a
+                  href="https://t.me/shuranlife"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary hover:underline"
+                >
+                  блоге
+                </a>
               </p>
             </div>
           </FadeIn>

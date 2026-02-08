@@ -17,6 +17,12 @@ const contacts = [
     username: "@dshuran",
   },
   {
+    icon: Send,
+    label: "Блог",
+    href: "https://t.me/shuranlife",
+    username: "@shuranlife",
+  },
+  {
     icon: Linkedin,
     label: "LinkedIn",
     href: "https://www.linkedin.com/in/swe-dshuran/",
@@ -37,7 +43,7 @@ export function Contact() {
           </p>
         </FadeIn>
 
-        <StaggerContainer className="grid sm:grid-cols-3 gap-4 max-w-2xl">
+        <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {contacts.map((contact) => (
             <StaggerItem key={contact.label}>
               <a
